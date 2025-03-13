@@ -32,11 +32,18 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
         .logo {
-            width: 100%;
-            max-width: 400px;
-            margin: 20px auto;
-            display: block;
+            width: 120px;
+            height: auto;
             transition: transform 0.3s ease;
         }
 
@@ -63,28 +70,30 @@
             margin-top: 20px;
         }
 
-        .button-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
             text-decoration: none;
-            transition: transform 0.3s ease;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
         }
 
-        .button-link img {
-            width: 80px;
-            height: 80px;
-            border-radius: 10px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        .btn-primary {
+            background: #007BFF;
         }
 
-        .button-link:hover {
-            transform: scale(1.1);
+        .btn-secondary {
+            background: #DC3545;
         }
 
-        .button-link img:hover {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        .btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
         }
 
         .footer {
@@ -98,9 +107,13 @@
                 font-size: 16px;
             }
 
-            .button-link img {
-                width: 60px;
-                height: 60px;
+            .logo {
+                width: 90px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 16px;
             }
         }
     </style>
@@ -108,22 +121,23 @@
 <body>
 
     <div class="container">
-        <a href="https://lmgdigital.github.io/education">
-            <img src="imagenes/F_O_R_E_D_U_C_A_T_I_O_N.jpg" alt="Educación" class="logo">
-        </a>
+        <div class="logo-container">
+            <a href="https://lmgdigital.github.io/education">
+                <img src="imagenes/F_O_R_E_D_U_C_A_T_I_O_N.jpg" alt="Educación" class="logo">
+            </a>
+            <a href="https://lmgdigital.github.io/education">
+                <img src="imagenes/GFX_Logo_LMG.ico" alt="LMG Digital" class="logo">
+            </a>
+        </div>
 
         <p class="text"><strong>Bienvenido: EQUIPO 3</strong></p>
         <p class="text">A continuación podrás descargar los horarios y roles de aseo de limpieza.</p>
         <p class="text"><i>El rol de aseo está solo señalizado para las fechas correspondientes al equipo 3.</i></p>
 
         <div class="buttons">
-            <a href="https://docs.google.com/spreadsheets/d/1E2YJdTrP72vxl7OFNQyGpglGF_MAhvru6ImTsNU8C0k/edit?usp=sharing" class="button-link">
-                <img src="imagenes/1.png" alt="Horarios">
-            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1E2YJdTrP72vxl7OFNQyGpglGF_MAhvru6ImTsNU8C0k/edit?usp=sharing" class="btn btn-primary">📅 Ver Horarios</a>
 
-            <a href="https://lmgdigital.github.io/404/" class="button-link">
-                <img src="imagenes/2.png" alt="Error 404">
-            </a>
+            <a href="https://lmgdigital.github.io/404/" class="btn btn-secondary">⚠️ Página 404</a>
         </div>
 
         <div class="footer">
